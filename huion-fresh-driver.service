@@ -1,0 +1,11 @@
+[Unit]
+Description=Huion H641P fresh express-key remapper (kernel-native)
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/python3 %h/.local/bin/huion-fresh-driver.py
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target
